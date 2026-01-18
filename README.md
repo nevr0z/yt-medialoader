@@ -10,7 +10,7 @@ This project is designed for quick and easy downloading of videos or audio witho
 
 - `yt-dlp` — main downloader
 - `ffmpeg` / `ffprobe` — media processing
-- `download` — script launcher
+- `start` — script launcher
 - `downloads/` — downloaded files folder
 - `links` — text file with URLs
 
