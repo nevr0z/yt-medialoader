@@ -1,38 +1,53 @@
-# yt-medialoader
+yt-medialoader is a simple offline script for downloading video and audio from YouTube and other supported platforms using yt-dlp and ffmpeg.
 
-A simple local media downloader based on **yt-dlp** and **ffmpeg**.
+This project is designed for users who want a fast and straightforward way to download media, without complex setup, command-line usage, or extra configuration.
 
-This project is designed for quick and easy downloading of videos or audio without complex setup or extra dependencies.
+The script automatically:
 
----
+selects the best available video quality;
 
-## 📦 Contents
+correctly merges video and audio streams;
 
-- `yt-dlp` — main downloader
-- `ffmpeg` / `ffprobe` — media processing
-- `start` — script launcher
-- `downloads/` — downloaded files folder
-- `links` — text file with URLs
+outputs files in MP4 format, compatible with most devices and players.
 
----
+🔧 How to use (1–2–3)
 
-## 🚀 How to use
+Open links.txt and paste your links (one link per line)
 
-1. Put video links into the `links` file (one link per line)
-2. Run the `download` script
-3. Files will appear in the `downloads` folder
+Run start.bat
 
----
+Downloaded files will appear in the downloads folder
 
-## ⚠ Requirements
+📦 Included files
 
-- Windows
-- Internet connection
+start.bat — launcher
 
-All required binaries are included.
+links.txt — list of URLs
 
----
+yt-dlp.exe — media downloader
 
-## 📄 License
+ffmpeg.exe / ffprobe.exe — media processing
 
-No license. Use at your own risk.
+downloads/ — output directory
+
+🎬 Format & quality
+
+By default:
+
+downloads the best available MP4 video
+
+forces M4A (AAC) audio for stable MP4 merging
+
+This avoids common issues related to OPUS audio, which is frequently used by YouTube but incompatible with the MP4 container.
+
+⚠ Notes
+
+The script works locally and does not rely on third-party websites
+
+Some videos may be unavailable due to region, privacy, or age restrictions
+
+The project is provided as-is, without any warranty
+
+⬇ Download
+
+A ready-to-use build is available in the Releases section.
